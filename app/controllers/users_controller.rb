@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    this_user = User.find(params[:id]) #該当するユーザーを検索
+    @first_microposut = this_user.microposts.first #ユーザーの最初のマイクロポストを取得
   end
 
   # GET /users/new
